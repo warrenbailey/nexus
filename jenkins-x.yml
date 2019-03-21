@@ -21,7 +21,7 @@ pipelineConfig:
                 command: /kaniko/executor
                 args:
                   - --dockerfile=Dockerfile
-                  - --destination=docker.io/jenkinsxio/nexus:$VERSION
+                  - --destination=gcr.io/jenkinsxio/nexus:$VERSION
                   - --context=/workspace/workspace
                   - --cache-repo=gcr.io/jenkinsxio/cache
                   - --cache=true
