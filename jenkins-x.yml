@@ -70,4 +70,4 @@ pipelineConfig:
                 - push-version
                 - --kind helm
                 - nexus
-                - $VERSION
+                - ${inputs.params.version}
