@@ -6,8 +6,8 @@ CHARTMUSEUM_CREDS_USR := $(shell cat /builder/home/basic-auth-user.json)
 CHARTMUSEUM_CREDS_PSW := $(shell cat /builder/home/basic-auth-pass.json)
 
 build: clean
-	helm dependency build
-	helm lint
+	helm dependency build charts/nexus
+	helm lint charts/nexus
 
 install: clean build
 	helm install charts/nexus --name ${NAME}
