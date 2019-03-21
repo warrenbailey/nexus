@@ -68,6 +68,7 @@ pipelineConfig:
                 command: updatebot
                 args:
                 - push-version
-                - --kind helm
+                - --kind
+                - helm
                 - nexus
                 - ${inputs.params.version}
