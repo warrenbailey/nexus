@@ -36,6 +36,6 @@ else ifeq ($(OS),Linux)
 else
 	exit -1
 endif
-	helm package .
+	helm package charts/nexus
 	curl --fail -u $(CHARTMUSEUM_CREDS_USR):$(CHARTMUSEUM_CREDS_PSW) --data-binary "@$(NAME)-$(VERSION).tgz" $(CHART_REPO)/api/charts
 	rm -rf ${NAME}*.tgz
